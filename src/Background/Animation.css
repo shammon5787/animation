@@ -1,0 +1,11 @@
+.background{
+position: fixed;
+top: 0px;
+right: 0px;
+bottom: 0px;
+left: 0px;
+z-index: -1;
+height: 100%;
+width: 100%;
+object-fit: cover;  
+}
