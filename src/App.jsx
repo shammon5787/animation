@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       <Animation playstatus = {playstatus} hercount = {hercount} />
-      <Hero playstatus = {playstatus} hercount = {hercount} herodata = {herodata} setherocount = {setherocount} setplayStatus = {setplayStatus} />
+      <Hero playstatus = {playstatus} hercount = {hercount} herodata = {herodata[hercount]} setherocount = {setherocount} setplayStatus = {setplayStatus} />
     </div>
   )
 }
