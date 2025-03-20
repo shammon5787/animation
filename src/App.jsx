@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Animation from './Background/Animation'
 import Hero from './Background/Hero'
 
@@ -10,6 +10,15 @@ const App = () => {
   ]
   const [playstatus, setplayStatus] = useState(true)
   const [hercount, setherocount] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setherocount((prev) => (prev + 1) % herodata.length); // Loop through indexes
+    }, 3000);
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, []);
+
   return (
     <div>
       <Animation playstatus = {playstatus} hercount = {hercount} />
