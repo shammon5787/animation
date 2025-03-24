@@ -11,7 +11,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center justify-between gap-10'>
                     <Link to = '/' className='text-xl font-semibold hover:bg-slate-500 p-3 rounded-md transition-all duration-700'>Background</Link>
-                    <Link to = '/hook' className='text-xl font-semibold hover:bg-slate-500 p-3 rounded-md transition-all duration-700'>Hooks</Link>
+                    <Link to = '/hooks' className='text-xl font-semibold hover:bg-slate-500 p-3 rounded-md transition-all duration-700'>Hooks</Link>
                     <Link to = '/background' className='text-xl font-semibold hover:bg-slate-500 p-3 rounded-md transition-all duration-700'>Background</Link>
                 </div>
                 <div>

@@ -3,7 +3,7 @@ import PrecHooks from '../PagesHooks/PrecHooks'
 
 const Hooks = () => {
   return (
-    <div className='pt-24'>
+    <div className='m-5'>
         <PrecHooks />
     </div>
   )
