@@ -1,22 +1,28 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
+
+const reducer = (state, action)=>{
+  switch(action.type){
+    case "Increment":
+      return
+      {
+        count : state.count +1
+        text : state.text
+      }
+  }
+
+}
 
 const PrecHooks = () => { 
-   const [count ,setcount] = useState(0)
-   const [text, settext] = useState("hello")
-   const add = ()=>{
-    const newc = count + 1
-    setcount(newc)
-   }
+
+const [state, dispatch] = useReducer(reducer , {count : 0, text: true})
+   
   return (
     <div>
-       <h1>{count}</h1>
+       <h1>{state.count}</h1>
        <button onClick={()=>{
-        add()
-        settext(!text)
+        dispatch({type: "Increment"})
        }}  className='bg-blue-950 cursor-pointer p-2 rounded-md font-semibold uppercase'>Increase</button>
-       {
-         text && <h1>Here Text Show</h1>
-       }
+       <h1>This is text</h1>
     </div>
   )
 }
